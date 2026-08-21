@@ -1,32 +1,41 @@
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyectos de Benjamin Salgado</title>
-        <style> body { background-color: rgb(172, 223, 243); }
-         ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-             margin: 0;
-            gap: 15px;
-        }
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Benjamin Salgado</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-stone-100 text-stone-900 min-h-screen p-6 md:p-12">
+
     <header>
-        <h1>Proyectos de Benjamin Salgado</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+        <h1 class="text-3xl font-extrabold tracking-tight">Proyectos de Benjamin Salgado</h1>
+        <nav class="mt-4">
+            <ul class="flex gap-4 text-blue-600 font-medium">
+                <li><a href="index.html" class="hover:underline">Inicio</a></li>
+                <li><a href="proyectos.html" class="hover:underline">Proyectos</a></li>
+                <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
             </ul>
         </nav>
-        <section>
-            <h2>Proyectos Destacados</h2>
-            <ul>
-                <li><a href="https://francescafelizpumplemes.netlify.app/">Proyecto 1: Francesca Feliz Pumplemes</a></li>
-                <li><a href="https://novios-al-volante.vercel.app/">Proyecto 2: novios al volante</a></li>
     </header>
 
+    <main class="mt-8">
+        <section>
+            <h2 class="text-xl font-bold text-slate-800 mb-4">Proyectos Destacados</h2>
+            <ul class="space-y-3">
+                <li>
+                    <a href="https://francescafelizpumplemes.netlify.app/" target="_blank" class="text-emerald-600 hover:underline font-semibold block">
+                        Proyecto 1: Francesca Feliz Pumplemes 💕
+                    </a>
+                </li>
+                <li>
+                    <a href="https://novios-al-volante.vercel.app/" target="_blank" class="text-indigo-600 hover:underline font-semibold block">
+                        Proyecto 2: Novios al Volante 🚗
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+</body>
 </html>
