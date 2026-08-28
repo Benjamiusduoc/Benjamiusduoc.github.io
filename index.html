@@ -6,8 +6,40 @@
     <title>Portafolio Profesional - Benjamín Salgado</title>
     <link rel="stylesheet" href="output.css">
     <script src="script.js" defer></script>
+
+    <style>
+    /* Soporte garantizado para modo claro/oscuro */
+    html { transition: background-color 0.3s ease, color 0.3s ease; }
+    html.dark {
+        color-scheme: dark;
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+    }
+    html.dark body {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+    }
+    html.dark .text-slate-800, html.dark .text-slate-700 { color: #f1f5f9 !important; }
+    html.dark .text-slate-500 { color: #94a3b8 !important; }
+    html.dark .bg-slate-100 { background-color: #0f172a !important; }
+    html.dark .bg-stone-100 { background-color: #0f172a !important; }
+    </style>
 </head>
 <body class="bg-slate-100 dark:bg-[#1e293b] text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
+
+    <!-- Botón Flotante Reactivo (Esquina Superior Derecha) -->
+    <button id="theme-toggle" type="button" aria-label="Cambiar tema" 
+        class="fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2 rounded-full 
+               bg-white/80 dark:bg-slate-800/80 backdrop-blur-md 
+               text-slate-800 dark:text-slate-100 
+               border border-slate-300 dark:border-slate-700 
+               shadow-md hover:shadow-lg 
+               transition-all duration-300 ease-out 
+               hover:scale-105 active:scale-95 cursor-pointer">
+    <span id="theme-toggle-icon" class="text-base">🌙</span>
+    <span id="theme-toggle-text" class="text-xs font-bold tracking-wider uppercase">Modo Oscuro</span>
+    </button>
+
 
     <header class="mb-8">
         <div class="flex flex-wrap justify-between items-center gap-4">
