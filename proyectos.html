@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos de Benjamín Salgado</title>
+    <title>Proyectos - Benjamín Salgado</title>
     <link rel="stylesheet" href="output.css">
+    <script src="script.js" defer></script>
 </head>
-<body class="bg-stone-100 text-stone-900 min-h-screen p-6 md:p-12">
+<body class="bg-slate-100 dark:bg-[#1e293b] text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
 
-    <header>
-        <h1 class="text-3xl font-extrabold tracking-tight">Proyectos de Benjamín Salgado</h1>
+    <header class="mb-8">
+        <div class="flex flex-wrap justify-between items-center gap-4">
+            <h1 class="text-3xl font-extrabold tracking-tight">Proyectos de Benjamín Salgado</h1>
+            <button id="theme-toggle" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 hover:opacity-80 transition">
+                🌙 Modo Oscuro
+            </button>
+        </div>
         <nav class="mt-4">
-            <ul class="flex gap-4 text-blue-600 font-medium">
+            <ul class="flex gap-4 text-blue-600 dark:text-blue-400 font-medium">
                 <li><a href="index.html" class="hover:underline">Inicio</a></li>
                 <li><a href="proyectos.html" class="hover:underline">Proyectos</a></li>
                 <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
@@ -19,17 +25,17 @@
         </nav>
     </header>
 
-    <main class="mt-8">
+    <main>
         <section>
-            <h2 class="text-xl font-bold text-slate-800 mb-4">Proyectos Destacados</h2>
+            <h2 class="text-2xl font-bold mb-4">Proyectos Destacados</h2>
             <ul class="space-y-3">
                 <li>
-                    <a href="https://francescafelizpumplemes.netlify.app/" target="_blank" class="text-emerald-600 hover:underline font-semibold block">
+                    <a href="https://francescafelizpumplemes.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold block">
                         Proyecto 1: Francesca Feliz Cumplemes 💕
                     </a>
                 </li>
                 <li>
-                    <a href="https://novios-al-volante.vercel.app/" target="_blank" class="text-indigo-600 hover:underline font-semibold block">
+                    <a href="https://novios-al-volante.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold block">
                         Proyecto 2: Novios al Volante 🚗
                     </a>
                 </li>
