@@ -1,39 +1,43 @@
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portafolio profesional Benjamin Salgado</title>
-        <link rel="stylesheet" href="output.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional - Benjamín Salgado</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[#1e293b] text-white min-h-screen p-6 md:p-12">
 
-
-    </head>
-    <body class="bg-[#1e293b]">
-
-    <body>
-        <header>
-            <h1>Bienvenido a mi Portafolio Profesional</h1>
-           <nav class="mt-4">
-            <ul class="flex gap-4 text-blue-600 font-medium">
+    <header>
+        <h1 class="text-3xl font-extrabold tracking-tight">Bienvenido a mi Portafolio Profesional</h1>
+        <nav class="mt-4">
+            <ul class="flex gap-4 text-blue-400 font-medium">
                 <li><a href="index.html" class="hover:underline">Inicio</a></li>
                 <li><a href="proyectos.html" class="hover:underline">Proyectos</a></li>
                 <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
             </ul>
-            </nav>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmeIl_-Jvgcj59aV8yqF23GP8lzFDdvjoWCjLnNZMzOzn5ONnzxUGY3M&s=10" alt="Foto de perfil" width="200">
-            <section>
-                <h2>Sobre mí</h2>
-                <p>Soy Benjamin Salgado, un desarrollador web apasionado por crear soluciones innovadoras y eficientes. Tengo experiencia en HTML, java, JavaScript y python.</p>
-            </section>
-            <section>
-                <h2>Habilidades</h2>
-                <ul>
-                    <li>Desarrollo web</li>
-                    <li>Diseño de interfaces</li>
-                    <li>Programación en Java, JavaScript y Python</li>
-                    <li>Gestión de proyectos</li>
-                </ul>
-        </header>
+        </nav>
+    </header>
 
-    </body>
+    <main class="mt-8 space-y-6">
+        <section class="flex flex-col md:flex-row gap-6 items-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmeIl_-Jvgcj59aV8yqF23GP8lzFDdvjoWCjLnNZMzOzn5ONnzxUGY3M&s=10" alt="Foto de perfil de Benjamín Salgado" class="rounded-full w-48 h-48 object-cover">
+            <div>
+                <h2 class="text-xl font-bold mb-2">Sobre mí</h2>
+                <p>Soy Benjamín Salgado, un desarrollador web apasionado por crear soluciones innovadoras y eficientes. Tengo experiencia en HTML, Java, JavaScript y Python.</p>
+            </div>
+        </section>
 
+        <section>
+            <h2 class="text-xl font-bold mb-2">Habilidades</h2>
+            <ul class="list-disc list-inside space-y-1">
+                <li>Desarrollo web</li>
+                <li>Diseño de interfaces</li>
+                <li>Programación en Java, JavaScript y Python</li>
+                <li>Gestión de proyectos</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
 </html>
