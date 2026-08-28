@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Profesional - Benjamín Salgado</title>
     <link rel="stylesheet" href="output.css">
+    <script src="script.js" defer></script>
 </head>
-<body class="bg-[#1e293b] text-white min-h-screen p-6 md:p-12">
+<body class="bg-slate-100 dark:bg-[#1e293b] text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
 
-    <header>
-        <h1 class="text-3xl font-extrabold tracking-tight">Bienvenido a mi Portafolio Profesional</h1>
+    <header class="mb-8">
+        <div class="flex flex-wrap justify-between items-center gap-4">
+            <h1 class="text-3xl font-extrabold tracking-tight">Bienvenido a mi Portafolio</h1>
+            <button id="theme-toggle" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 hover:opacity-80 transition">
+                🌙 Modo Oscuro
+            </button>
+        </div>
         <nav class="mt-4">
-            <ul class="flex gap-4 text-blue-400 font-medium">
+            <ul class="flex gap-4 text-blue-600 dark:text-blue-400 font-medium">
                 <li><a href="index.html" class="hover:underline">Inicio</a></li>
                 <li><a href="proyectos.html" class="hover:underline">Proyectos</a></li>
                 <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
@@ -19,18 +25,20 @@
         </nav>
     </header>
 
-    <main class="mt-8 space-y-6">
+    <main class="space-y-8">
         <section class="flex flex-col md:flex-row gap-6 items-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmeIl_-Jvgcj59aV8yqF23GP8lzFDdvjoWCjLnNZMzOzn5ONnzxUGY3M&s=10" alt="Foto de perfil de Benjamín Salgado" class="rounded-full w-48 h-48 object-cover">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmeIl_-Jvgcj59aV8yqF23GP8lzFDdvjoWCjLnNZMzOzn5ONnzxUGY3M&s=10" alt="Foto de perfil de Benjamín Salgado" class="rounded-full w-44 h-44 object-cover border-2 border-slate-300 dark:border-slate-600">
             <div>
-                <h2 class="text-xl font-bold mb-2">Sobre mí</h2>
-                <p>Soy Benjamín Salgado, un desarrollador web apasionado por crear soluciones innovadoras y eficientes. Tengo experiencia en HTML, Java, JavaScript y Python.</p>
+                <h2 class="text-2xl font-bold mb-2">Sobre mí</h2>
+                <p class="leading-relaxed text-slate-700 dark:text-slate-300">
+                    Soy Benjamín Salgado, un desarrollador web apasionado por crear soluciones innovadoras y eficientes. Tengo experiencia en HTML, Java, JavaScript y Python.
+                </p>
             </div>
         </section>
 
         <section>
-            <h2 class="text-xl font-bold mb-2">Habilidades</h2>
-            <ul class="list-disc list-inside space-y-1">
+            <h2 class="text-2xl font-bold mb-3">Habilidades</h2>
+            <ul class="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300">
                 <li>Desarrollo web</li>
                 <li>Diseño de interfaces</li>
                 <li>Programación en Java, JavaScript y Python</li>
