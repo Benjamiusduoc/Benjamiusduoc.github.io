@@ -6,73 +6,70 @@
     <title>Proyectos - Benjamín Salgado</title>
     <link rel="stylesheet" href="output.css">
     <script src="script.js" defer></script>
-
-        <style>
-    /* Soporte garantizado para modo claro/oscuro */
-    html { transition: background-color 0.3s ease, color 0.3s ease; }
-    html.dark {
-        color-scheme: dark;
-        background-color: #0f172a !important;
-        color: #f8fafc !important;
-    }
-    html.dark body {
-        background-color: #0f172a !important;
-        color: #f8fafc !important;
-    }
-    html.dark .text-slate-800, html.dark .text-slate-700 { color: #f1f5f9 !important; }
-    html.dark .text-slate-500 { color: #94a3b8 !important; }
-    html.dark .bg-slate-100 { background-color: #0f172a !important; }
-    html.dark .bg-stone-100 { background-color: #0f172a !important; }
-    </style>
 </head>
-<body class="bg-slate-100 dark:bg-[#1e293b] text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
 
-
-    <!-- Botón Flotante Reactivo (Esquina Superior Derecha) -->
-    <button id="theme-toggle" type="button" aria-label="Cambiar tema" 
-        class="fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2 rounded-full 
-               bg-white/80 dark:bg-slate-800/80 backdrop-blur-md 
-               text-slate-800 dark:text-slate-100 
-               border border-slate-300 dark:border-slate-700 
-               shadow-md hover:shadow-lg 
-               transition-all duration-300 ease-out 
-               hover:scale-105 active:scale-95 cursor-pointer">
-    <span id="theme-toggle-icon" class="text-base">🌙</span>
-    <span id="theme-toggle-text" class="text-xs font-bold tracking-wider uppercase">Modo Oscuro</span>
+    <!-- Botón Flotante -->
+    <button type="button" aria-label="Cambiar tema" 
+        class="theme-toggle-btn fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2 rounded-full 
+               bg-white/80 dark:bg-slate-800/80 backdrop-blur-md text-slate-800 dark:text-slate-100 
+               border border-slate-300 dark:border-slate-700 shadow-md hover:shadow-lg 
+               transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+        <span class="theme-icon text-base">🌙</span>
+        <span class="theme-text text-xs font-bold tracking-wider uppercase">Modo Oscuro</span>
     </button>
-    <header class="mb-8">
-        <div class="flex flex-wrap justify-between items-center gap-4">
-            <h1 class="text-3xl font-extrabold tracking-tight">Proyectos de Benjamín Salgado</h1>
-            <button id="theme-toggle" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 hover:opacity-80 transition">
-                🌙 Modo Oscuro
-            </button>
+
+    <header class="mb-10 max-w-5xl mx-auto">
+        <div class="flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-tight">Proyectos</h1>
         </div>
         <nav class="mt-4">
-            <ul class="flex gap-4 text-blue-600 dark:text-blue-400 font-medium">
+            <ul class="flex gap-6 text-blue-600 dark:text-blue-400 font-medium">
                 <li><a href="index.html" class="hover:underline">Inicio</a></li>
-                <li><a href="proyectos.html" class="hover:underline">Proyectos</a></li>
+                <li><a href="proyectos.html" class="hover:underline font-bold text-blue-800 dark:text-blue-300">Proyectos</a></li>
                 <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2 class="text-2xl font-bold mb-4">Proyectos Destacados</h2>
-            <ul class="space-y-3">
-                <li>
-                    <a href="https://francescafelizpumplemes.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold block">
-                        Proyecto 1: Francesca Feliz Cumplemes 💕
-                    </a>
-                </li>
-                <li>
-                    <a href="https://novios-al-volante.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold block">
-                        Proyecto 2: Novios al Volante 🚗
-                    </a>
-                </li>
-            </ul>
+    <main class="max-w-5xl mx-auto">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Proyecto 1 -->
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Francesca Feliz Cumplemes 💕</h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 font-medium">Web App</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                        Aplicación web conmemorativa interactiva.
+                    </p>
+                </div>
+                <a href="https://francescafelizpumplemes.netlify.app/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm transition">
+                    Ver Proyecto Live ↗
+                </a>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Novios al Volante 🚗</h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-300 font-medium">Web App</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                        Plataforma interactiva para Novios al Volante.
+                    </p>
+                </div>
+                <a href="https://novios-al-volante.vercel.app/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition">
+                    Ver Proyecto Live ↗
+                </a>
+            </article>
+
         </section>
     </main>
-
 </body>
 </html>

@@ -1,42 +1,42 @@
+
+// Script para alternar entre el modo oscuro y claro
 (function () {
     function applyTheme(isDark) {
         const html = document.documentElement;
-        const icon = document.getElementById('theme-toggle-icon');
-        const text = document.getElementById('theme-toggle-text');
-
         if (isDark) {
             html.classList.add('dark');
-            if (icon) icon.textContent = '☀️';
-            if (text) text.textContent = 'Modo Claro';
+            localStorage.setItem('theme', 'dark');
         } else {
             html.classList.remove('dark');
-            if (icon) icon.textContent = '🌙';
-            if (text) text.textContent = 'Modo Oscuro';
+            localStorage.setItem('theme', 'light');
         }
+        updateToggleButtons(isDark);
     }
 
-    // Carga inicial inmediata
+    function updateToggleButtons(isDark) {
+        document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+            const icon = btn.querySelector('.theme-icon');
+            const text = btn.querySelector('.theme-text');
+            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+            if (text) text.textContent = isDark ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    }
+
+    // Carga e inicialización
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark;
-    
-    if (initialDark) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
 
-    // Configuración al cargar el DOM
+    if (initialDark) document.documentElement.classList.add('dark');
+
     document.addEventListener('DOMContentLoaded', () => {
-        applyTheme(document.documentElement.classList.contains('dark'));
+        updateToggleButtons(document.documentElement.classList.contains('dark'));
 
-        const toggleBtn = document.getElementById('theme-toggle');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', () => {
+        document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
                 const isDarkNow = !document.documentElement.classList.contains('dark');
                 applyTheme(isDarkNow);
-                localStorage.setItem('theme', isDarkNow ? 'dark' : 'light');
             });
-        }
+        });
     });
 })();

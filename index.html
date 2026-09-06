@@ -3,79 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional - Benjamín Salgado</title>
+    <title>Portafolio - Benjamín Salgado</title>
     <link rel="stylesheet" href="output.css">
     <script src="script.js" defer></script>
-
-    <style>
-    /* Soporte garantizado para modo claro/oscuro */
-    html { transition: background-color 0.3s ease, color 0.3s ease; }
-    html.dark {
-        color-scheme: dark;
-        background-color: #0f172a !important;
-        color: #f8fafc !important;
-    }
-    html.dark body {
-        background-color: #0f172a !important;
-        color: #f8fafc !important;
-    }
-    html.dark .text-slate-800, html.dark .text-slate-700 { color: #f1f5f9 !important; }
-    html.dark .text-slate-500 { color: #94a3b8 !important; }
-    html.dark .bg-slate-100 { background-color: #0f172a !important; }
-    html.dark .bg-stone-100 { background-color: #0f172a !important; }
-    </style>
 </head>
-<body class="bg-slate-100 dark:bg-[#1e293b] text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
 
-    <!-- Botón Flotante Reactivo (Esquina Superior Derecha) -->
-    <button id="theme-toggle" type="button" aria-label="Cambiar tema" 
-        class="fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2 rounded-full 
-               bg-white/80 dark:bg-slate-800/80 backdrop-blur-md 
-               text-slate-800 dark:text-slate-100 
-               border border-slate-300 dark:border-slate-700 
-               shadow-md hover:shadow-lg 
-               transition-all duration-300 ease-out 
-               hover:scale-105 active:scale-95 cursor-pointer">
-    <span id="theme-toggle-icon" class="text-base">🌙</span>
-    <span id="theme-toggle-text" class="text-xs font-bold tracking-wider uppercase">Modo Oscuro</span>
+    <!-- Botón Flotante de Modo Oscuro -->
+    <button type="button" aria-label="Cambiar tema" 
+        class="theme-toggle-btn fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2 rounded-full 
+               bg-white/80 dark:bg-slate-800/80 backdrop-blur-md text-slate-800 dark:text-slate-100 
+               border border-slate-300 dark:border-slate-700 shadow-md hover:shadow-lg 
+               transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+        <span class="theme-icon text-base">🌙</span>
+        <span class="theme-text text-xs font-bold tracking-wider uppercase">Modo Oscuro</span>
     </button>
 
-
-    <header class="mb-8">
-        <div class="flex flex-wrap justify-between items-center gap-4">
+    <header class="mb-10 max-w-5xl mx-auto">
+        <div class="flex justify-between items-center">
             <h1 class="text-3xl font-extrabold tracking-tight">Bienvenido a mi Portafolio</h1>
-            <button id="theme-toggle" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 hover:opacity-80 transition">
-                🌙 Modo Oscuro
-            </button>
         </div>
         <nav class="mt-4">
-            <ul class="flex gap-4 text-blue-600 dark:text-blue-400 font-medium">
-                <li><a href="index.html" class="hover:underline">Inicio</a></li>
+            <ul class="flex gap-6 text-blue-600 dark:text-blue-400 font-medium">
+                <li><a href="index.html" class="hover:underline font-bold text-blue-800 dark:text-blue-300">Inicio</a></li>
                 <li><a href="proyectos.html" class="hover:underline">Proyectos</a></li>
                 <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="space-y-8">
-        <section class="flex flex-col md:flex-row gap-6 items-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmeIl_-Jvgcj59aV8yqF23GP8lzFDdvjoWCjLnNZMzOzn5ONnzxUGY3M&s=10" alt="Foto de perfil de Benjamín Salgado" class="rounded-full w-44 h-44 object-cover border-2 border-slate-300 dark:border-slate-600">
+    <main class="max-w-5xl mx-auto space-y-8">
+        <!-- Sobre mí -->
+        <section class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col md:flex-row gap-6 items-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmeIl_-Jvgcj59aV8yqF23GP8lzFDdvjoWCjLnNZMzOzn5ONnzxUGY3M&s=10" 
+                 alt="Foto de perfil de Benjamín Salgado" 
+                 class="rounded-full w-36 h-36 object-cover border-2 border-slate-300 dark:border-slate-600 shadow-md">
             <div>
-                <h2 class="text-2xl font-bold mb-2">Sobre mí</h2>
-                <p class="leading-relaxed text-slate-700 dark:text-slate-300">
+                <h2 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Sobre mí</h2>
+                <p class="leading-relaxed text-slate-600 dark:text-slate-300">
                     Soy Benjamín Salgado, un desarrollador web apasionado por crear soluciones innovadoras y eficientes. Tengo experiencia en HTML, Java, JavaScript y Python.
                 </p>
             </div>
         </section>
 
-        <section>
-            <h2 class="text-2xl font-bold mb-3">Habilidades</h2>
-            <ul class="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300">
-                <li>Desarrollo web</li>
-                <li>Diseño de interfaces</li>
-                <li>Programación en Java, JavaScript y Python</li>
-                <li>Gestión de proyectos</li>
-            </ul>
+        <!-- Habilidades -->
+        <section class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 shadow-sm">
+            <h2 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Habilidades</h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-semibold">Desarrollo Web</span>
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-semibold">Diseño de Interfaces</span>
+                <span class="px-3 py-1.5 rounded-lg bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-sm font-semibold">JavaScript</span>
+                <span class="px-3 py-1.5 rounded-lg bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300 text-sm font-semibold">Tailwind CSS</span>
+                <span class="px-3 py-1.5 rounded-lg bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 text-sm font-semibold">Java</span>
+                <span class="px-3 py-1.5 rounded-lg bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-sm font-semibold">Python</span>
+            </div>
         </section>
     </main>
 

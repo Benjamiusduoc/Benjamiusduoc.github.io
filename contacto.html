@@ -6,65 +6,79 @@
     <title>Contacto - Benjamín Salgado</title>
     <link rel="stylesheet" href="output.css">
     <script src="script.js" defer></script>
-
-        <style>
-    /* Soporte garantizado para modo claro/oscuro */
-    html { transition: background-color 0.3s ease, color 0.3s ease; }
-    html.dark {
-        color-scheme: dark;
-        background-color: #0f172a !important;
-        color: #f8fafc !important;
-    }
-    html.dark body {
-        background-color: #0f172a !important;
-        color: #f8fafc !important;
-    }
-    html.dark .text-slate-800, html.dark .text-slate-700 { color: #f1f5f9 !important; }
-    html.dark .text-slate-500 { color: #94a3b8 !important; }
-    html.dark .bg-slate-100 { background-color: #0f172a !important; }
-    html.dark .bg-stone-100 { background-color: #0f172a !important; }
-    </style>
 </head>
-<body class="bg-slate-100 dark:bg-[#1e293b] text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen p-6 md:p-12 transition-colors duration-300">
 
-    <!-- Botón Flotante Reactivo (Esquina Superior Derecha) -->
-    <button id="theme-toggle" type="button" aria-label="Cambiar tema" 
-        class="fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2 rounded-full 
-               bg-white/80 dark:bg-slate-800/80 backdrop-blur-md 
-               text-slate-800 dark:text-slate-100 
-               border border-slate-300 dark:border-slate-700 
-               shadow-md hover:shadow-lg 
-               transition-all duration-300 ease-out 
-               hover:scale-105 active:scale-95 cursor-pointer">
-    <span id="theme-toggle-icon" class="text-base">🌙</span>
-    <span id="theme-toggle-text" class="text-xs font-bold tracking-wider uppercase">Modo Oscuro</span>
+    <!-- Botón Flotante -->
+    <button type="button" aria-label="Cambiar tema" 
+        class="theme-toggle-btn fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2 rounded-full 
+               bg-white/80 dark:bg-slate-800/80 backdrop-blur-md text-slate-800 dark:text-slate-100 
+               border border-slate-300 dark:border-slate-700 shadow-md hover:shadow-lg 
+               transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+        <span class="theme-icon text-base">🌙</span>
+        <span class="theme-text text-xs font-bold tracking-wider uppercase">Modo Oscuro</span>
     </button>
 
-    <header class="mb-8">
-        <div class="flex flex-wrap justify-between items-center gap-4">
+    <header class="mb-10 max-w-5xl mx-auto">
+        <div class="flex justify-between items-center">
             <h1 class="text-3xl font-extrabold tracking-tight">Contacto</h1>
-            <button id="theme-toggle" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 hover:opacity-80 transition">
-                🌙 Modo Oscuro
-            </button>
         </div>
         <nav class="mt-4">
-            <ul class="flex gap-4 text-blue-600 dark:text-blue-400 font-medium">
+            <ul class="flex gap-6 text-blue-600 dark:text-blue-400 font-medium">
                 <li><a href="index.html" class="hover:underline">Inicio</a></li>
                 <li><a href="proyectos.html" class="hover:underline">Proyectos</a></li>
-                <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+                <li><a href="contacto.html" class="hover:underline font-bold text-blue-800 dark:text-blue-300">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="space-y-6">
-        <img src="https://www.rover.com/blog/wp-content/uploads/cat-breathing-fast-orange-kitten-1024x575.jpg" alt="Foto de contacto" class="w-48 rounded-lg border-2 border-slate-300 dark:border-slate-600">
-        
-        <div>
-            <span class="text-sm text-slate-500 dark:text-slate-400 font-medium">Teléfono / WhatsApp</span>
-            <h2 class="text-2xl font-bold">+56 9 6398 6957</h2>
-        </div>
+    <main class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Información de contacto -->
+        <section class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">¡Hablemos!</h2>
+                <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                    Estoy disponible para colaborar en proyectos web, desarrollo de software o resolver cualquier duda que tengas.
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">📱</span>
+                        <div>
+                            <span class="text-xs text-slate-500 dark:text-slate-400 block font-medium">Teléfono / WhatsApp</span>
+                            <a href="https://wa.me/56963986957" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-800 dark:text-slate-100 hover:text-emerald-500 transition">
+                                +56 9 6398 6957 ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <p class="text-emerald-600 dark:text-emerald-400 font-semibold">¡MUCHAS GRACIAS POR VER! ❤️</p>
+            <p class="text-emerald-600 dark:text-emerald-400 font-semibold mt-6 text-sm">
+                ¡Gracias por visitar mi portafolio! ❤️
+            </p>
+        </section>
+
+        <!-- Formulario -->
+        <section class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 shadow-sm">
+            <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('¡Mensaje listo para enviar!');">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium mb-1">Nombre</label>
+                    <input type="text" id="nombre" name="name" required class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-1">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+                    <textarea id="mensaje" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </section>
     </main>
 
 </body>
